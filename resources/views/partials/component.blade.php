@@ -9,8 +9,10 @@
 
     {!! $component->name !!}
     <?php
-      foreach ($component->tags as $tag) {
-        echo "&nbsp <span class=\"label label-default disabled\" style=\"padding-left=10px\">$tag</span>";
+      if ($component->description != "nofilters") {
+        foreach ($component->tags as $tag) {
+          echo "&nbsp <span class=\"label label-default disabled\" style=\"padding-left=10px\">$tag</span>";
+        }
       }
     ?>
       <div class="pull-right">
