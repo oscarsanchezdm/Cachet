@@ -15,11 +15,11 @@
         } 
 
         function disable_all() {
-            disable_filter("component-child");
+            disable_filter("component");
         }
 
         function enable_all() {
-            enable_filter("component-child");
+            enable_filter("component");
         }
 
         function check_empty_groups(show) {

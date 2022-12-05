@@ -1,5 +1,5 @@
 <?php
-        $el = "<li class=\"list-group-item status-$component->status";
+        $el = "<li class=\"list-group-item component status-$component->status";
         foreach ($component->tags as $tag) {
                 $el = $el . ' ' . $tag;
         }
