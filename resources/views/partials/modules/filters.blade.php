@@ -79,52 +79,13 @@
         }
         
     </script>
-    <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
-        <input type="checkbox" style="display:none" value="BCS" autocomplete="off" onchange="checkbox_press('BCS',this)"> BCS
-    </label>
+    <?php
+    $values = array('BCS', 'CSUC', 'IEC', 'UAB', 'UB', 'UdG', 'UdL', 'UOC', 'UPC', 'UPF', 'URV', 'UVic');
 
-    <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
-        <input type="checkbox" style="display:none" value="CSUC" autocomplete="off" onchange="checkbox_press('CSUC',this)"> CSUC
-    </label>
-
-    <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
-        <input type="checkbox" style="display:none" value="IEC" autocomplete="off" onchange="checkbox_press('IEC',this)"> IEC
-    </label>
-
-    <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
-        <input type="checkbox" style="display:none" value="UAB" autocomplete="off" onchange="checkbox_press('UAB',this)"> UAB
-    </label>
-
-    <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
-        <input type="checkbox" style="display:none" value="UB" autocomplete="off" onchange="checkbox_press('UB',this)"> UB
-    </label>
-
-    <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
-        <input type="checkbox" style="display:none" value="UdG" autocomplete="off" onchange="checkbox_press('UdG',this)"> UdG
-    </label>
-
-    <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
-        <input type="checkbox" style="display:none" value="UdL" autocomplete="off" onchange="checkbox_press('UdL',this)"> UdL
-    </label>
-
-    <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
-        <input type="checkbox" style="display:none" value="UOC" autocomplete="off" onchange="checkbox_press('UOC',this)"> UOC
-    </label>
-
-    <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
-        <input type="checkbox" style="display:none" value="UPC" autocomplete="off" onchange="checkbox_press('UPC',this)"> UPC
-    </label>
-
-    <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
-        <input type="checkbox" style="display:none" value="UPF" autocomplete="off" onchange="checkbox_press('UPF',this)"> UPF
-    </label>
-
-    <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
-        <input type="checkbox" style="display:none" value="URV" autocomplete="off" onchange="checkbox_press('URV',this)"> URV
-    </label>
-
-    <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
-        <input type="checkbox" style="display:none" value="UVic" autocomplete="off" onchange="checkbox_press('UVic',this)"> UVic
-    </label>
-
+    foreach ($values as $value) {
+        echo '<label class="btn btn-primary" name="filter" style="margin-bottom: 20px; margin-right: 10px;">';
+        echo '<input type="checkbox" style="display:none" value="' . $value . '" autocomplete="off" onchange="checkbox_press(\'' . $value . '\',this)"> ' . $value;
+        echo '</label>';
+    }
+    ?>
 </div>
