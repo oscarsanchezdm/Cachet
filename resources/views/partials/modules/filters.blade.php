@@ -126,3 +126,5 @@
     <label class="btn btn-primary" name="filter" style="margin-bottom: 20px;">
         <input type="checkbox" style="display:none" value="UVic" autocomplete="off" onchange="checkbox_press('UVic',this)"> UVic
     </label>
+
+</div>
