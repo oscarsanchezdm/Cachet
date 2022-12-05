@@ -1,15 +1,19 @@
-<li class="list-group-item {{ $component->group_id ? "sub-component" : "component" }} status-{{ $component->status }}">
-    @if($component->link)
-    <a href="{{ $component->link }}" target="_blank" class="links">{!! $component->name !!}</a>
-    @else
+<?php
+        $el = "<li class=\"list-group-item status-$component->status";
+        foreach ($component->tags as $tag) {
+                $el = $el . ' ' . $tag;
+        }
+        $el = $el . "\">";
+        echo $el;
+?>
+
     {!! $component->name !!}
-    @endif
-
-    @if($component->description)
-    <i class="ion ion-ios-help-outline help-icon" data-toggle="tooltip" data-title="{{ $component->description }}" data-container="body"></i>
-    @endif
-
-    <div class="pull-right">
-        <small class="text-component-{{ $component->status }} {{ $component->status_color }}" data-toggle="tooltip" title="{{ trans('cachet.components.last_updated', ['timestamp' => $component->updated_at_formatted]) }}">{{ $component->human_status }}</small>
+    <?php
+      foreach ($component->tags as $tag) {
+        echo "&nbsp <span class=\"label label-default disabled\" style=\"padding-left=10px\">$tag</span>";
+      }
+    ?>
+      <div class="pull-right">
+        <small class="text-component-{{ $component->status }} {{ $component->status_color }}" data-toggle="tooltip">{{ $component->human_status }}</small>
     </div>
 </li>
