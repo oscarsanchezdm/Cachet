@@ -38,12 +38,9 @@ class GeneralController extends AbstractApiController
      */
     public function version()
     {
-        //return CACHET_VERSION;
-        $latest = app()->make(Releases::class)->latest();
-
         return $this->setMetaData([
-            'on_latest' => $latest,
-            'latest'    => $latest,
+            'on_latest' => CACHET_VERSION,
+            'latest'    => CACHET_VERSION,
         ])->item(CACHET_VERSION);
     }
 
