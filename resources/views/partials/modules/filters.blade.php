@@ -80,7 +80,7 @@
         
     </script>
     <?php
-    $values = array('BCS', 'CSUC', 'IEC', 'UAB', 'UB', 'UdG', 'UdL', 'UOC', 'UPC', 'UPF', 'URV', 'UVic');
+    $values = array('CSUC', 'UAB', 'UB', 'UdG', 'UdL', 'UOC', 'UPC', 'UPF', 'URV', 'UVic');
 
     foreach ($values as $value) {
         echo '<label class="btn btn-primary" name="filter" style="margin-bottom: 20px; margin-right: 4px;">';
