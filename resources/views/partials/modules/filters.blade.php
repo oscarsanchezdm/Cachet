@@ -80,10 +80,10 @@
         
     </script>
     <?php
-    $values = array('CSUC', 'UAB', 'UB', 'UdG', 'UdL', 'UOC', 'UPC', 'UPF', 'URV', 'UVic');
+    $values = array('UAB', 'UB', 'UdG', 'UdL', 'UOC', 'UPC', 'UPF', 'URV', 'UVic');
 
     foreach ($values as $value) {
-        echo '<label class="btn btn-primary" name="filter" style="margin-bottom: 20px; margin-right: 4px;">';
+        echo '<label class="btn btn-primary" align="center" name="filter" style="margin-bottom: 20px; margin-right: 4px;">';
         echo '<input type="checkbox" style="display:none" value="' . $value . '" autocomplete="off" onchange="checkbox_press(\'' . $value . '\',this)"> ' . $value;
         echo '</label>';
     }
