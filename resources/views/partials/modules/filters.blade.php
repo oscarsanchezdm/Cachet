@@ -1,4 +1,4 @@
-<div class="section-components" style="margin-top:0">
+<div class="section-components" align="center" style="margin-top:0">
     <script>
         function disable_filter(filter) {
             const collection = document.getElementsByClassName(filter);
@@ -83,7 +83,7 @@
     $values = array('UAB', 'UB', 'UdG', 'UdL', 'UOC', 'UPC', 'UPF', 'URV', 'UVic');
 
     foreach ($values as $value) {
-        echo '<label class="btn btn-primary" align="center" name="filter" style="margin-bottom: 20px; margin-right: 4px;">';
+        echo '<label class="btn btn-primary" name="filter" style="margin-bottom: 20px; margin-right: 4px;">';
         echo '<input type="checkbox" style="display:none" value="' . $value . '" autocomplete="off" onchange="checkbox_press(\'' . $value . '\',this)"> ' . $value;
         echo '</label>';
     }
